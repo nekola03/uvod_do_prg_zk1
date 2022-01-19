@@ -1,0 +1,7 @@
+VSTUP:
+	Zadej text, u kterého chceš vybrat samohlásky: Ahoj, já jsem názorný text!
+
+VÝSTUP:
+	V textu je 8 samohlásek
+	Podívej se na samohlásky:
+ 	(A)h(o)j, j(á) js(e)m n(á)z(o)rn(ý) t(e)xt! 
