@@ -1,24 +1,27 @@
-#VSTUP
-textStr = input("Zadej text, u kterého chceš vybrat samohlásky: ") #zadání textu uživatelem
+#FUNCTION OF SUM OF VOWELS
+def calculateVowels(textStr,vowelBig,vowelSmall):
+    countVowel = 0
+    for vowel in textStr:
+        if ((vowel in vowelSmall) or (vowel in vowelBig)):
+            countVowel += 1
+    return countVowel
 
-#DEFINICE KONSTANT MALÝCH A VELKÝCH SAMOHLÁSEK
+#DEFINITION CONSTANTS OF LOWERCASE AND UPPERCASE VOWELS 
 VOWELSMALL = "aáeéěiíoóuúůyý"
 VOWELBIG = "AÁEÉĚIÍOÓUÚŮYÝ"
 
-#POČÍTADLO SAMOHLÁSEK
-countVowel = 0
-for vowel in textStr:
-    if ((vowel in VOWELSMALL) or (vowel in VOWELBIG)):
-        countVowel += 1
+#INPUT
+textStr = input("Zadej text, u kterého chceš vybrat samohlásky: ") #input string by user
 
-#VYZNAČENÍ SAMOHLÁSEK V TEXTU
+#SHOW VOWELS IN SPECIFIC TEXT
 newStr = ""
 for letter in textStr:
-    if ((letter in VOWELSMALL) or (letter in VOWELBIG)): #výpis znaku (samohlásky) se závorkou
+    if ((letter in VOWELSMALL) or (letter in VOWELBIG)): #registration of vowels with brackets 
         newStr += "(%s)" %letter
-    else:   #výpis ostatních znaků
+    else:   #registration of other letters
         newStr += letter 
 
-#VÝSTUP
-print(f"\nV textu je {countVowel} samohlásek")
+#OUTPUT
+
+print(f"\nV textu je {calculateVowels(textStr,VOWELBIG,VOWELSMALL)} samohlásek")
 print("Podívej se na samohlásky:\n",newStr,"\n")
