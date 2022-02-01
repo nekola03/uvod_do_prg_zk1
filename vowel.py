@@ -23,5 +23,8 @@ for letter in textStr:
 
 #OUTPUT
 
-print(f"\nV textu je {calculateVowels(textStr,VOWELBIG,VOWELSMALL)} samohlásek")
-print("Podívej se na samohlásky:\n",newStr,"\n")
+if len(textStr) != 0:
+    print(f"\nV textu je {calculateVowels(textStr,VOWELBIG,VOWELSMALL)} samohlásek")
+    print("Podívej se na samohlásky:\n",newStr,"\n")
+else:
+    print("Zadal jsi prázdný řetězec")
