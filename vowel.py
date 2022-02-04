@@ -11,7 +11,7 @@ VOWELSMALL = "aáeéěiíoóuúůyý"
 VOWELBIG = "AÁEÉĚIÍOÓUÚŮYÝ"
 
 #INPUT
-textStr = input("Zadej text, u kterého chceš vybrat samohlásky: ") #input string by user
+textStr = input("Input text, where you want to find wovels: ") #input string by user
 
 #SHOW VOWELS IN SPECIFIC TEXT
 newStr = ""
@@ -24,7 +24,7 @@ for letter in textStr:
 #OUTPUT
 
 if len(textStr) != 0:
-    print(f"\nV textu je {calculateVowels(textStr,VOWELBIG,VOWELSMALL)} samohlásek")
-    print("Podívej se na samohlásky:\n",newStr,"\n")
+    print(f"\nV You can find {calculateVowels(textStr,VOWELBIG,VOWELSMALL)} vowels in the text.")
+    print("See vowels:\n",newStr,"\n")
 else:
-    print("Zadal jsi prázdný řetězec")
+    print("You inputed empty string!!")
